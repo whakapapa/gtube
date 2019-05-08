@@ -203,6 +203,7 @@ class HttpieFD(ExternalFD):
     def available(cls):
         return check_executable('http', ['--version'])
 
+
     def _make_cmd(self, tmpfilename, info_dict):
         cmd = ['http', '--download', '--output', tmpfilename, info_dict['url']]
         for key, val in info_dict['http_headers'].items():
